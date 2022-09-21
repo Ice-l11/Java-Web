@@ -11,7 +11,7 @@
         <!-- servlet-class Servlet程序的全类名 -->
         <servlet-class>com.lyy.servlet.StudentServlet</servlet-class>
         <!-- 服务启动时创建对象，在该子标签中填写整数，越小的整数优先级越高 -->
-<!--        <load-on-startup>1</load-on-startup>-->
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <!-- <servlet-mapping> 给servlet配置访问地址-->
     <servlet-mapping>
