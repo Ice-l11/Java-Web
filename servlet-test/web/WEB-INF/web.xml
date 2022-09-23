@@ -23,4 +23,13 @@
          -->
         <url-pattern>/servlet/student</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestGenericServlet</servlet-name>
+        <servlet-class>com.lyy.servlet.TestGenericServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestGenericServlet</servlet-name>
+        <url-pattern>/servlet/testGeneric</url-pattern>
+    </servlet-mapping>
 </web-app>
