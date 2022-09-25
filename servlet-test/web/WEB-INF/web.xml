@@ -39,6 +39,7 @@
         <servlet-name>TestGenericServlet</servlet-name>
         <url-pattern>/servlet/testGeneric</url-pattern>
     </servlet-mapping>
+    
     <servlet>
         <servlet-name>WelcomeServlet</servlet-name>
         <servlet-class>com.lyy.servlet.WelcomeServlet</servlet-class>
@@ -46,5 +47,14 @@
     <servlet-mapping>
         <servlet-name>WelcomeServlet</servlet-name>
         <url-pattern>/servlet/welcome</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>HttpServletRequestTest</servlet-name>
+        <servlet-class>com.lyy.servlet.HttpServletRequestTest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HttpServletRequestTest</servlet-name>
+        <url-pattern>/httpServletRequest</url-pattern>
     </servlet-mapping>
 </web-app>
