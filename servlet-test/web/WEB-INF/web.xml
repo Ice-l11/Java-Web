@@ -57,4 +57,22 @@
         <servlet-name>HttpServletRequestTest</servlet-name>
         <url-pattern>/httpServletRequest</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AServlet</servlet-name>
+        <servlet-class>com.lyy.servlet.AServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AServlet</servlet-name>
+        <url-pattern>/AServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BServlet</servlet-name>
+        <servlet-class>com.lyy.servlet.BServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BServlet</servlet-name>
+        <url-pattern>/BServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
