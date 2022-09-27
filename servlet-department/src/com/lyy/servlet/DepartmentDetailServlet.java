@@ -47,8 +47,8 @@ public class DepartmentDetailServlet extends HttpServlet {
             }
         }catch (Exception e){
             out.print(e.getMessage());
+        }finally {
+            JdbcUtils.closeResource(conn,ps,rs);
         }
-
-
     }
 }
