@@ -25,6 +25,25 @@ public class DepartmentListServlet extends HttpServlet {
         resp.setContentType("text/html;charset=UTF-8");
         String contextPath = req.getContextPath();
         PrintWriter out = resp.getWriter();
+        out.print("<!DOCTYPE html>");
+        out.print("<html lang=\"en\">");
+        out.print("<head>");
+        out.print("    <meta charset=\"UTF-8\">");
+        out.print("    <title>Detail</title>");
+        out.print("</head>");
+        out.print("<body>");
+        out.print("<script type=\"text/javascript\">");
+        out.print("    function deleteData(no){");
+        out.print("        var flag = window.confirm(\"请确认是否删除？\");");
+        out.print("        if (flag){");
+        out.print("            document.location.href=\""+contextPath+"/dept/delete?deptno=\" + no;");
+        out.print("        }");
+        out.print("    }");
+        out.print("</script>");
+        out.print("<h2>这是详情页</h2>");
+        out.print("<hr>");
+        out.print("<h2 align=\"center\">部门列表</h2>");
+        out.print("<table border=\"1px\" align=\"center\" width=\"50%\">");
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -43,7 +62,7 @@ public class DepartmentListServlet extends HttpServlet {
                 out.print("				<td>"+deptno+"</td>");
                 out.print("				<td>"+dname+"</td>");
                 out.print("				<td>");
-                out.print("					<a href='"+contextPath+"/dept/delete?deptno="+deptno+"'>删除</a>");
+                out.print("					<a href=\"javascript:void(0)\" onclick=\"deleteData("+deptno+")\">删除</a>");
                 out.print("					<a href='"+contextPath+"/dept/edit?deptno="+deptno+"'>修改</a>");
                 out.print("					<a href='"+contextPath+"/dept/detail?deptno="+deptno+"'>详情</a>");
                 out.print("				</td>");
@@ -55,5 +74,9 @@ public class DepartmentListServlet extends HttpServlet {
         }finally {
             JdbcUtils.closeResource(conn,ps,rs);
         }
+        out.print("</table>");
+        out.print("<h2><a href='"+contextPath+"/dept/addEdit'>新增部门</a></h2>");
+        out.print("</body>");
+        out.print("</html>");
     }
 }
