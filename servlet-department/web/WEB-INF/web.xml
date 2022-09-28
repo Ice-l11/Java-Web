@@ -48,4 +48,22 @@
         <servlet-name>DepartmentUpdateServlet</servlet-name>
         <url-pattern>/dept/update</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DepartmentAddEditServlet</servlet-name>
+        <servlet-class>com.lyy.servlet.DepartmentAddEditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DepartmentAddEditServlet</servlet-name>
+        <url-pattern>/dept/addEdit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DepartmentAddServlet</servlet-name>
+        <servlet-class>com.lyy.servlet.DepartmentAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DepartmentAddServlet</servlet-name>
+        <url-pattern>/dept/add</url-pattern>
+    </servlet-mapping>
 </web-app>
