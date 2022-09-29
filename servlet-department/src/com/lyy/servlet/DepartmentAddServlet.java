@@ -20,9 +20,8 @@ import java.sql.PreparedStatement;
  **/
 public class DepartmentAddServlet extends HttpServlet {
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         req.setCharacterEncoding("UTF-8");
-        PrintWriter out = resp.getWriter();
         Connection conn = null;
         PreparedStatement ps = null;
         try {
@@ -38,7 +37,14 @@ public class DepartmentAddServlet extends HttpServlet {
             int i = ps.executeUpdate();
             if (i == 1){
                 //success
-                req.getRequestDispatcher("/index.html").forward(req,resp);
+                //req.getRequestDispatcher("/index.html").forward(req,resp);
+                //改为重定向
+                /*
+                * 重定向要加入项目名称，为什么？
+                *   浏览器发生请求，请求路径是需要加入项目名称的；
+                *   /servlet-department/dept/list 将此请求路径发送给浏览器，浏览器会自发向服务器发送一次全新的请求：/servlet-department/dept/list
+                */
+                resp.sendRedirect("/servlet-department/dept/list");
             }else {
                 req.getRequestDispatcher("/error.html").forward(req,resp);
             }
