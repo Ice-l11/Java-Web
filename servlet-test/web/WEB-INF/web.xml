@@ -102,4 +102,8 @@
         <filter-name>LifeCycleFilter</filter-name>
         <url-pattern>/servlet/lifeCycle</url-pattern>
     </filter-mapping>
+    
+    <listener>
+        <listener-class>com.lyy.listener.MyServletContextListener</listener-class>
+    </listener>
 </web-app>
