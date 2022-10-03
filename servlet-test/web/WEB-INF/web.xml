@@ -82,6 +82,24 @@
     </filter>
     <filter-mapping>
         <filter-name>MyFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/myFilter</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <init-param>
+            <param-name>user</param-name>
+            <param-value>Ice</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>123456</param-value>
+        </init-param>
+        <filter-name>LifeCycleFilter</filter-name>
+        <filter-class>com.lyy.filter.LifeCycleFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>LifeCycleFilter</filter-name>
+        <url-pattern>/servlet/lifeCycle</url-pattern>
     </filter-mapping>
 </web-app>
