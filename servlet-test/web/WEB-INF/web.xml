@@ -75,4 +75,13 @@
         <servlet-name>BServlet</servlet-name>
         <url-pattern>/BServlet</url-pattern>
     </servlet-mapping>
+
+    <filter>
+        <filter-name>MyFilter</filter-name>
+        <filter-class>com.lyy.filter.MyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>MyFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>
